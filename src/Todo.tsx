@@ -2,6 +2,12 @@ import Form from "./components/Form";
 import List from "./components/List";
 import {useState} from "react";
 
+export type Todo = {
+    id: number,
+    content: string,
+    editing: boolean
+};
+
 
 const Todo = () => {
 
@@ -23,11 +29,11 @@ const Todo = () => {
             editing: false,
         }
     ];
-
-    //Todoリストコンポーネントで状態をもたせる
-    const [todos, setTodos] = useState(todoList);
-
     
+    //Todoリストコンポーネントで状態をもたせる
+    //型のタイプはTodo[]型
+    const [todos, setTodos] = useState<Todo[]>(todoList);
+
     return (
         <>
             <List />
