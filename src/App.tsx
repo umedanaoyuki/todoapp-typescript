@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import Todo from "./Todo";
 
+//https://terupro.net/react-ts-todo-sample/
+
 function App() {
   return (
       <>
